@@ -42,7 +42,7 @@ input::placeholder {
 }
 
 button {
-  padding: 15px 30px;
+  padding: 13.5px 30px;
   border-radius: 8px;
   color: white;
   background-color: hsl(278, 68%, 11%);
@@ -125,7 +125,7 @@ button {
 }
 
 .input-section {
-  display: flex;
+  display: none;
   flex-direction: column;
   margin: 11vh 20px;
 }
@@ -156,6 +156,33 @@ button {
   display: none;
 }
 
+.thankyou-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 11vh 20px;
+}
+
+.thankyou__image {
+  width: 80px;
+}
+
+.thankyou__heading {
+  letter-spacing: 3px;
+  margin: 30px 0 0;
+  color: hsl(278, 68%, 11%);
+  font-weight: 500;
+}
+
+.thankyou__p {
+  color: hsl(279, 6%, 55%);
+}
+
+.thankyou__button {
+  width: 100%;
+  margin-top: 25px;
+}
 @media screen and (min-width: 600px) {
   .card-number {
     font-size: 25px;
@@ -212,6 +239,12 @@ button {
 
   .card-details {
     font-size: 9.5px;
+  }
+
+  .thankyou-section {
+    flex: 1;
+    justify-content: center;
+    margin: auto 15%;
   }
 }
 
