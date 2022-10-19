@@ -47,14 +47,12 @@
             </svg>
           </div>
           <div class="card-number">
-            <span id="0-4">0000</span>
-            <span id="4-8">0000</span>
-            <span id="8-12">0000</span>
-            <span id="12-16">0000</span>
+            <span id="one">0000 0000 0000 0000</span>
           </div>
           <div class="cardholder-name card-details">
-            <span id="firstname">JANE</span>
-            <span id="lastname">APPLESEED</span>
+            <span id="firstName">JANE</span>
+            <span id="lastName">APPLESEED</span>
+            <span id="middleName"></span>
           </div>
           <div class="exp-date card-details">
             <span id="mm">00</span><span>/</span><span id="yy">00</span>
@@ -66,30 +64,39 @@
         </div>
       </div>
       <div class="input-section">
-          <label for="cardholder-name">CARDHOLDER NAME</label>
-          <input type="text" name="" id="" placeholder="e.g. Jane Appleseed">
-          <label for="card-number">CARD NUMBER</label>
-          <input type="number" name="" id="" placeholder="e.g. 1234 5678 9123 0000">
-        <div class="flex-container">
+          <div class="_name">
+            <label for="cardholder-name">CARDHOLDER NAME</label>
+            <input type="text" name="" id="inputName" placeholder="e.g. Jane Appleseed">
+            <p id="nameAlert">Please insert your first name and last name</p>
+          </div>
+          <div class="_num">
+            <label for="card-number">CARD NUMBER</label>
+            <input type="text" name="" id="inputCardNum" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+            <p id="numAlert">Wrong format, numbers only</p>
+          </div>
+          
+          <div class="flex-container">
           <div class="flex-element">
             <label for="">EXP. DATE (MM/YY)</label> 
-            <div class="input-date"><input id="input-mm"type="number" placeholder="MM"><input id="input-yy" type="number" placeholder="YY"></div>
+            <div class="input-date"><input id="inputMm" type="number" placeholder="MM"><input id="inputYy" type="number" minlength="2" maxlength="2" placeholder="YY"></div>
+            <p id="dateAlert">Wrong format</p>
+            <p id="dateAlertBlank">Can't be blank</p>
           </div>
           <div class="flex-element">
             <label for="">CVC</label>
-            <input id="input-cvv" type="number" placeholder="e.g. 123">
+            <input id="inputCvv" type="number" maxlength="3" placeholder="e.g. 123">
+            <p id="cvvAlert">Wrong format</p>
+            <p id="cvvAlertBlank">Can't be blank</p>
           </div>
         </div>
-        <button type="submit">Confirm</button>
+        <button id="confirm" type="submit">Confirm</button>
         
         </div>
         <div class="thankyou-section">
           <img class="thankyou__image"src="./images/icon-complete.svg" alt="check mark in a purple circle">
           <h2 class="thankyou__heading">THANK YOU!</h2>
           <p class="thankyou__p">We've added your card details</p>
-        <button class="thankyou__button" type="submit">Continue</button>
-       
-        
+        <button class="thankyou__button" id="continue" type="submit">Continue</button>
         </div>
     </main>
     <script src="script.js"></script>

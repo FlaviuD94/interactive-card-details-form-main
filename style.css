@@ -24,17 +24,18 @@ label {
 }
 
 input {
+  position: relative;
   min-width: none;
   padding: 15px 15px 11px 15px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   width: 100%;
   border: 1px solid hsl(270, 3%, 87%);
 }
 
 input:focus {
-  outline: none !important;
-  border: 3px solid linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  outline: none;
+  border: none;
 }
 
 input::placeholder {
@@ -91,41 +92,96 @@ button {
 .card-number {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 7%;
   font-size: 4.8vmin;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
 }
 
 .cardholder-name {
   color: white;
   position: absolute;
-  top: 77%;
+  top: 80%;
   left: 7%;
   font-size: 2.4vmin;
   letter-spacing: 1px;
 }
 
+._name {
+  position: relative;
+}
+
+#nameAlert {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+
+._num {
+  position: relative;
+}
+
+#numAlert {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+
+#dateAlert {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+#dateAlertBlank {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+
+#cvvAlert {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+#cvvAlertBlank {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: 72px;
+  color: hsl(0, 100%, 66%);
+}
+
 .exp-date {
   color: white;
   position: absolute;
-  top: 77%;
-  left: 80%;
+  top: 80%;
+  left: 83%;
   font-size: 2.4vmin;
   letter-spacing: 1px;
 }
 
 .cvv {
   color: white;
+  opacity: 0.8;
   position: absolute;
-  top: 43.8%;
-  left: 80%;
+  top: 45%;
+  left: 82%;
   font-size: 2.4vmin;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .input-section {
-  display: none;
+  display: flex;
   flex-direction: column;
   margin: 11vh 20px;
 }
@@ -140,7 +196,7 @@ button {
   margin-right: 10px;
 }
 
-#input-mm {
+#inputMm {
   margin-right: 8px;
 }
 
@@ -149,6 +205,7 @@ button {
   align-items: center;
 }
 .flex-element {
+  position: relative;
   flex: 1;
 }
 
@@ -157,7 +214,7 @@ button {
 }
 
 .thankyou-section {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -275,5 +332,9 @@ button {
     left: 190px;
     top: 140px;
     border-radius: 10px;
+  }
+
+  .card-number {
+    font-size: 25px;
   }
 }
